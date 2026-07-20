@@ -26,28 +26,30 @@ if ( ! class_exists('Form_Renderer') ) {
      */
     class Form_Renderer {
 
-      private $form-name;
-      private $form-id;
-      private $fields;
-      private $submit-buttons;
-      private $required-fields;
+      protected $form-name;
+      protected $form-id;
+      protected $fields;
+      protected $submit-buttons;
+      protected $required-fields;
       
       /**
       * Constructor
       * @since 1.0.0
       **/
-      public function __construct($form-name, $form-id, $fields, $submit-buttons) {
-        $this->form-name = $form-name;
-        $this->form-id = $form-id;
-        $this->fields = $fields;
-        $this->submit-buttons = $submit-buttons;
+      public function __construct() {
       }
 
       /**
       * Generic form html
       * @since 1.0.0
       **/
-      public function render_form() {
+      public function render_form($form-name, $form-id, $fields, $submit-buttons) {
+        //define form
+        $this->form-name = $form-name;
+        $this->form-id = $form-id;
+        $this->fields = $fields;
+        $this->submit-buttons = $submit-buttons;
+          
         $this->enqueue_script();
         $this->localize_script();
         return $this->render_html();
