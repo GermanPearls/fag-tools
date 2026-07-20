@@ -176,6 +176,37 @@ if ( ! class_exists('Form_Renderer') ) {
         return $html;
       }
 
+      /**
+      * Define default field and properties
+      * For use in sub-clsases when defining forms
+      * @since 1.0.0
+      *
+      **/
+      protected get_default_field() {
+        $fld = [];
+        $fld['id']="";
+        $fld['name']="";
+        $fld['type']="string";
+        $fld['pretty-name']="";
+        $fld['class']="";
+        return $fld;
+      }
+
+      /**
+      * Define default button and properties
+      * For use in sub-classes when defining forms
+      * @since 1.0.0
+      *
+      **/
+      protected get_default_submit_button() {
+        $btn = [];
+        $btn['type']="submit";
+        $btn['text']="Submit";
+        $btn['action']="";
+        $btn['class']="";
+        return $btn;
+      }
+
 
   
 
