@@ -121,6 +121,7 @@ class Fag_Tools {
 		 * side of the site.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-fag-tools-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-curl.php;
 
 		$this->loader = new Fag_Tools_Loader();
 
