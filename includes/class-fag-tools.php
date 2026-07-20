@@ -121,7 +121,11 @@ class Fag_Tools {
 		 * side of the site.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-fag-tools-public.php';
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-curl.php;
+		
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-curl.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-form-handler.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-form-renderer.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/Forms/class-cemetary-export-form.php';
 
 		$this->loader = new Fag_Tools_Loader();
 
