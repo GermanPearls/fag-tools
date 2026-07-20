@@ -186,7 +186,7 @@ if ( ! class_exists('Form_Renderer') ) {
         $fld = [];
         $fld['id']="";
         $fld['name']="";
-        $fld['type']="string";
+        $fld['type']="text";
         $fld['pretty-name']="";
         $fld['class']="";
         return $fld;
